@@ -1,6 +1,6 @@
 {
   "name": "@aponica/goosemgr-mysqlgoose-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Goose Manager for Mysqlgoose Database Abstraction",
   "homepage": "https://aponica.com/docs/goosemgr-mysqlgoose-js/",
   "funding": "https://www.paypal.com/biz/fund?id=BEHTAS8WARM68",
