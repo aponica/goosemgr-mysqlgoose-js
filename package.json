@@ -1,0 +1,31 @@
+{
+  "name": "@aponica/goosemgr-mysqlgoose-js",
+  "version": "1.0.0",
+  "description": "Goose Manager for Mysqlgoose Database Abstraction",
+  "homepage": "https://aponica.com/docs/goosemgr-mysqlgoose-js/",
+  "funding": "https://www.paypal.com/biz/fund?id=BEHTAS8WARM68",
+  "keywords": ["goosemgr","database","interface","model","mysqlgoose"],
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "doc": "node ./node_modules/.bin/jsdoc -c jsdoc.conf.json",
+    "test": "node ./node_modules/.bin/jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aponica/goosemgr-mysqlgoose-js.git"
+  },
+  "author": "Opplaud LLC <dev.support@aponica.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@aponica/goosemgr-js": "^1.0.3",
+    "@aponica/mysqlgoose-js": "^2.1.3"
+  },
+  "devDependencies": {
+    "@aponica/jsdoc-plugin-linecomments": "^1.1.1",
+    "jest": "^26.4.2",
+    "jsdoc": "^3.6.6"
+  }
+}
