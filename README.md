@@ -43,13 +43,11 @@ documentation.
 Remember: `await` can only be used within an `async` function!
 
 ```javascript
-const fs = require( 'fs' );
 const cMysqlgooseMgr = require( '@aponica/goosemgr-mysqlgoose-js' );
 
-const mgr = new cMysqlgooseMgr(
-  JSON.parse( fs.ReadFileSync( 'definitions.json' ) ) );
+const mgr = new cMysqlgooseMgr( 'definitions.json' );
   
-await mgr.fiConnect( JSON.parse( fs.ReadFileSync( 'mysql.json' ) ) );
+await mgr.fiConnect( 'mysql.json' );
 
 const cust = await mgr.fiModel( 'customer' ).findById( 1234 );
 console.info( cust.id ); // 1234
@@ -61,17 +59,14 @@ This syntax can be used anywhere; for example, at the top level of a
 NodeJS application:
 
 ```javascript
-const fs = require( 'fs' );
 const cMysqlgooseMgr = require( '@aponica/goosemgr-mysqlgoose-js' );
 
-const mgr = new cMysqlgooseMgr(
-  JSON.parse( fs.ReadFileSync( 'definitions.json' ) ) );
+const mgr = new cMysqlgooseMgr( 'definitions.json' );
   
-mgr.fiConnect( JSON.parse( fs.ReadFileSync( 'mysql.json' ) ) ).
-  then( () => {
-    mgr.fiModel( 'customer' ).findById( 1234 ).
-      then( cust => console.info( cust.id ) ); // 1234
-    } );
+mgr.fiConnect( 'mysql.json' ).then( () => {
+  mgr.fiModel( 'customer' ).findById( 1234 ).
+    then( cust => console.info( cust.id ) ); // 1234
+  } );
 ```
 
 ## Please Donate!
