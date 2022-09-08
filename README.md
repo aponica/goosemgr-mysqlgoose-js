@@ -47,7 +47,7 @@ const cMysqlgooseMgr = require( '@aponica/goosemgr-mysqlgoose-js' );
 
 const mgr = new cMysqlgooseMgr( 'definitions.json' );
   
-await mgr.fiConnect( 'mysql.json' );
+await mgr.fpConnect( 'mysql.json' );
 
 const cust = await mgr.fiModel( 'customer' ).findById( 1234 );
 console.info( cust.id ); // 1234
@@ -63,7 +63,7 @@ const cMysqlgooseMgr = require( '@aponica/goosemgr-mysqlgoose-js' );
 
 const mgr = new cMysqlgooseMgr( 'definitions.json' );
   
-mgr.fiConnect( 'mysql.json' ).then( () => {
+mgr.fpConnect( 'mysql.json' ).then( () => {
   mgr.fiModel( 'customer' ).findById( 1234 ).
     then( cust => console.info( cust.id ) ); // 1234
   } );
