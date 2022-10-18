@@ -9,6 +9,8 @@
 
 const kcMysqlgooseMgr = require( '../index.js' );
 
+const kMysqlgoose = require( '@aponica/mysqlgoose-js' );
+
 const zConfigPath = './node_modules/@aponica/mysqlgoose-js/tests-config/';
 
 //---------------------------------------------------------------------------
@@ -35,6 +37,8 @@ test( 'InvalidConnection', fDone => {
 test( 'EverythingElse', fDone => {
 
   const iGooseMgr = new kcMysqlgooseMgr(zConfigPath + 'definitions.json' );
+
+  expect( iGooseMgr.fzPopulate() ).toBe( kMysqlgoose.POPULATE );
 
   iGooseMgr.fpConnect( zConfigPath + 'config_mysql.json' ).then( // connect
     () => { // success
